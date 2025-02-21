@@ -13,5 +13,12 @@ pipeline {
                 sh 'hello.py/'  // Update as per your test command
             }
         }
+stage('Deploy') {
+            steps {
+                echo 'Deploying the project...'
+                // Replace this with your actual deployment command, e.g.:
+                sh 'deploy.sh'  // Or use a tool like Ansible, kubectl, etc.
+            }
+        }
     }
 }
